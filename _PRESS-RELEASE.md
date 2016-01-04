@@ -17,28 +17,28 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+  > WordHoarder
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  > Efficient way to learn new words in foreign language
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  > An application that allows you to pull definitions of 'new' words that you come upon while reading, talking, watching TV and etc. WordHoarder lets you associate images with words, and get quized their meaning whenever you want.
 
 ## Problem ##
-  > Describe the problem your product solves.
+  > Memorizing new words, and keeping then in ones place rather than on different pieces of paper.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  > An application allows me to keep words in one place and easy accessible with just a few clicks. Also, quizes me their meaning, and keeping me on my toes.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > 'One of the coolest apps that I got to work on.'
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Go to https://wordhoarder.herokuapp.com/ and create new account.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > 'WordHoarder is probably the best way to learn new words, and have access to them 24/7 in case you need to refresh your mind.'
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Visit wordhoarder.herokuapp.com for more information.
