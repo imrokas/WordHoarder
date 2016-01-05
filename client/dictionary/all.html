@@ -1,7 +1,11 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
+		<div ng-show="allWords.length === 0">
+			<h3>Appears like you have no words yet... :(</h3>
+			<p class="lead">You should <a href="#/add">add</a> some!</p>
+		</div>
 		<ul class="list-group">
-		  <li class="list-group-item" ng-repeat="data in allWords">{{ data.word }} - {{ data.definition }} <span class="pull-right" ng-click="deleteWord(data)">X</span></li>
+		  <li class="list-group-item" ng-repeat="data in allWords">{{ data.word }} - {{ data.definition }} <span class="pull-right" ng-click="deleteWord(data, $index)">X</span></li>
 		</ul>
 	</div>
 </div>
