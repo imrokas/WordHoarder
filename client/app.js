@@ -1,6 +1,8 @@
 angular.module('wordHoarder', [
 	'wordHoarder.HomeController',
 	'wordHoarder.authentication',
+	'wordHoarder.dictionaryController',
+	'wordHoarder.services',
 	'firebase',
 	'ui.router'
 ])
@@ -10,16 +12,37 @@ angular.module('wordHoarder', [
   	.state('home', {
     	url: '/home',
     	templateUrl: 'home/home.html',
-    	controller: 'HomeController'
+    	controller: 'HomeController',
+    	authenticate: false
   	})
   	.state('login', {
   		url: '/login',
   		templateUrl: 'auth/login.html',
-  		controller: 'AuthController'
+  		controller: 'AuthController',
+    	authenticate: false
   	})
   	.state('register', {
   		url: '/register',
   		templateUrl: 'auth/register.html',
-  		controller: 'AuthController'
+  		controller: 'AuthController',
+    	authenticate: false
+  	})
+  	.state('allWords', {
+  		url: '/all',
+  		templateUrl: 'dictionary/all.html',
+  		controller: 'DictionaryController',
+    	authenticate: true
   	});
-});
+}).run(run);
+
+
+function run($rootScope, $state, AuthenticationFactory) {
+  $rootScope.$on("$stateChangeStart", function(event, toState, toParams, fromState, fromParams) {
+    if (toState.authenticate && !AuthenticationFactory.isLoggedIn()) {
+        $state.go("login");
+        event.preventDefault();
+    } else if(AuthenticationFactory.isLoggedIn()) {
+    	$rootScope.loggedIn = true;
+    }
+  });
+};

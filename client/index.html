@@ -23,9 +23,13 @@
 
   	    <!-- Collect the nav links, forms, and other content for toggling -->
   	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  	    	<ul class="nav navbar-nav" ng-show="loggedIn">
+  	        <li><a href="#/all">Dictionary</a></li>
+  	        <li><a href="#/add">Add New Word</a></li>
+  	      </ul>
   	      <ul class="nav navbar-nav navbar-right">
-  	        <li><a href="/#/login">Login</a></li>
-  	        <li><a href="/#/register">Register</a></li>
+  	        <li><a href="/#/login" ng-hide="loggedIn">Login</a></li>
+  	        <li><a href="#" ng-show="loggedIn">Logout</a></li>
   	      </ul>
   	    </div><!-- /.navbar-collapse -->
   	  </div><!-- /.container-fluid -->
@@ -38,12 +42,12 @@
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
-    <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-    <script src="home/homeController.js"></script>
+    <script src="services/services.js"></script>
+    <script src="home/home.js"></script>
     <script src="auth/authentication.js"></script>
+    <script src="dictionary/dictionary.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
