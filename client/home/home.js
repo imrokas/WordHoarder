@@ -1,4 +1,4 @@
 angular.module('wordHoarder.HomeController', [])
-.controller('HomeController', function($scope, $firebaseAuth){
+.controller('HomeController', function($scope){
 	
 });

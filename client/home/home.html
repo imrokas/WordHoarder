@@ -1,6 +1,8 @@
 <div class="jumbotron text-center">
 	<h1>Welcome to Word Hoarder!</h1>
 	<p class="lead">A web application that allows to learn new words easier.</p>
-	<p><a class="btn btn-primary btn-lg" href="/#/register" role="button">Register</a></p>
-	<h5 class="small"> Have an account already?<a href="/#/login">Log In</a></h5>
+	<div ng-hide="loggedIn">
+		<p><a class="btn btn-primary btn-lg" href="/#/register" role="button">Register</a></p>
+		<h5 class="small"> Have an account already?<a href="/#/login">Log In</a></h5>
+	</div>
 </div>
