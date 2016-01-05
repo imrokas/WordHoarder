@@ -1,0 +1,22 @@
+{
+  "name": "word-hoarder",
+  "version": "0.0.1",
+  "description": "word learning app",
+  "main": "client/app.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imrokas/2015-11-solo.git"
+  },
+  "author": "rokas@imrokas.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imrokas/2015-11-solo/issues"
+  },
+  "homepage": "https://github.com/imrokas/2015-11-solo#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

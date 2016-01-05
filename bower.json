@@ -1,0 +1,23 @@
+{
+  "name": "word-hoarder",
+  "description": "word learning app",
+  "main": "client/app.js",
+  "authors": [
+    "rokas@imrokas.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/imrokas/2015-11-solo",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "directory": "client/bower_components/",
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.6"
+  }
+}
