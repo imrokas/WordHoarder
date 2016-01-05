@@ -4,6 +4,9 @@ angular.module('wordHoarder.services', [])
 	var authObj = $firebaseAuth(ref);
 
 	var isLoggedIn = function() {
+		if(ref.getAuth()) {
+			$rootScope.loggedIn = true;
+		}
 		return ref.getAuth();
 	};
 
@@ -16,7 +19,6 @@ angular.module('wordHoarder.services', [])
 		    console.log("Login Failed!", error);
 		  } else {
 		    console.log("Authenticated successfully with payload:", authData);
-		    $rootScope.loggedIn = true;
 		    $state.go('allWords');
 		  }
 		}, {
@@ -40,6 +42,7 @@ angular.module('wordHoarder.services', [])
 
 	logout = function() {
 		authObj.$unauth();
+		console.log('clicked logout');
 		$rootScope.loggedIn = false;
 		$state.go('home');
 	}

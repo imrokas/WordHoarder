@@ -27,6 +27,12 @@ angular.module('wordHoarder', [
   		controller: 'AuthController',
     	authenticate: false
   	})
+  	.state('logout', {
+  		url: '/logout',
+  		templateUrl: 'auth/logout.html',
+  		controller: 'AuthController',
+    	authenticate: false
+  	})
   	.state('allWords', {
   		url: '/all',
   		templateUrl: 'dictionary/all.html',
@@ -41,8 +47,6 @@ function run($rootScope, $state, AuthenticationFactory) {
     if (toState.authenticate && !AuthenticationFactory.isLoggedIn()) {
         $state.go("login");
         event.preventDefault();
-    } else if(AuthenticationFactory.isLoggedIn()) {
-    	$rootScope.loggedIn = true;
     }
   });
 };
