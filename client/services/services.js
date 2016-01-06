@@ -18,7 +18,7 @@ angular.module('wordHoarder.services', [])
 		  if (error) {
 		    console.log("Login Failed!", error);
 		  } else {
-		    console.log("Authenticated successfully with payload:", authData);
+		    //console.log("Authenticated successfully with payload:", authData);
 		    $state.go('allWords');
 		  }
 		}, {
@@ -34,7 +34,7 @@ angular.module('wordHoarder.services', [])
 		  if (error) {
 		    console.log("Error creating user:", error);
 		  } else {
-		    console.log("Successfully created user account with uid:", userData.uid);
+		    //console.log("Successfully created user account with uid:", userData.uid);
 		    $state.go('login');
 		  }
 		});
@@ -42,7 +42,7 @@ angular.module('wordHoarder.services', [])
 
 	logout = function() {
 		authObj.$unauth();
-		console.log('clicked logout');
+		//console.log('clicked logout');
 		$rootScope.loggedIn = false;
 		$state.go('home');
 	}

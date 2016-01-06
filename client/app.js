@@ -44,6 +44,12 @@ angular.module('wordHoarder', [
   		templateUrl: 'dictionary/add.html',
   		controller: 'DictionaryController',
     	authenticate: true
+  	})
+  	.state('editWord', {
+  		url: '/edit',
+  		templateUrl: 'dictionary/edit.html',
+  		controller: 'DictionaryController',
+    	authenticate: true
   	});
 }).run(run);
 

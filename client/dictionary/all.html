@@ -5,7 +5,11 @@
 			<p class="lead">You should <a href="#/add">add</a> some!</p>
 		</div>
 		<ul class="list-group">
-		  <li class="list-group-item" ng-repeat="data in allWords">{{ data.word }} - {{ data.definition }} <span class="pull-right" ng-click="deleteWord(data, $index)">X</span></li>
+		  <li class="list-group-item" ng-repeat="data in allWords">
+		  	<b>{{ data.word }}</b> - {{ data.definition }}
+		  	<button class="pull-right btn btn-default btn-xs" ng-click="deleteWord(data, $index)"><span class="glyphicon glyphicon-remove"></span>DELETE</button>
+		  	<a href='#/edit' class="pull-right btn btn-default btn-xs" ng-click="edit($index)"><span class="glyphicon glyphicon-pencil"> </span>EDIT</a>
+		  </li>
 		</ul>
 	</div>
 </div>

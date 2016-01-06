@@ -1,0 +1,16 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<h1>Edit Word</h1>
+		<form>
+		  <div class="form-group">
+		    <label for="word">Word</label>
+		    <input type="text" class="form-control" id="word" placeholder="Word" ng-model="editWord.word">
+		  </div>
+		  <div class="form-group">
+		    <label for="definition">Definition</label>
+		    <textarea class="form-control" id="definition" placeholder="Definition" rows="3" ng-model="editWord.definition"></textarea>
+		  </div>
+		  <a href="#/all" class="btn btn-default" ng-click="updateWord(editWord)">Save</a>
+		</form>
+	</div>
+</div>
