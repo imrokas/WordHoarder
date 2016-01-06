@@ -3,6 +3,7 @@ angular.module('wordHoarder', [
 	'wordHoarder.authentication',
 	'wordHoarder.dictionaryController',
 	'wordHoarder.services',
+	'wordHoarder.quiz',
 	'firebase',
 	'ui.router'
 ])
@@ -49,6 +50,12 @@ angular.module('wordHoarder', [
   		url: '/edit',
   		templateUrl: 'dictionary/edit.html',
   		controller: 'DictionaryController',
+    	authenticate: true
+  	})
+  	.state('quiz', {
+  		url: '/quiz',
+  		templateUrl: 'quiz/quiz.html',
+  		controller: 'QuizController',
     	authenticate: true
   	});
 }).run(run);

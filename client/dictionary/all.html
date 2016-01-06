@@ -15,7 +15,7 @@
 		</div>
 		<ul class="list-group">
 		  <li class="list-group-item" ng-repeat="data in allWords | filter: search: strict ">
-		  	<p><b>{{ data.word }}</b>
+		  	<p class="text-uppercase"><b>{{ data.word }}</b>
 		  		<button class="pull-right btn btn-default btn-xs" ng-click="deleteWord(data, $index)"><span class="glyphicon glyphicon-remove"></span>DELETE</button>
 		  		<a href='#/edit' class="pull-right btn btn-default btn-xs" ng-click="edit($index)"><span class="glyphicon glyphicon-pencil"> </span>EDIT</a>
 		  	</p>
